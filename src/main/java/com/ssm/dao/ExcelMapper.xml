@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.mapper.ExcelMapper">
+
+    <insert id="InsertExcel">
+
+INSERT INTO excel (id,salmedicinename,salamount,salprice,saldate,salname) VALUES (#{id},#{salmedicinename},#{salamount},#{salprice},#{saldate},#{salname})
+
+    </insert>
+
+    <select id="SelectAllMsg" resultType="com.ssm.entity.Excel">
+        SELECT * FROM excel
+    </select>
+
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssm.dao.mapper.LiuMapper">
+
+<resultMap id="SelectInventory" type="com.ssm.entity.Medicine">
+    <id column="m_id" property="mId"/>
+	<result column="m_medicineid" property="mMedicineid"/>
+	<result column="m_name" property="mName"/>
+	<result column="m_pastdate" property="mPastdate"/>
+	<result column="m_price" property="mPrice"/>
+	<result column="m_classify" property="mClassify"/>
+	<result column="m_inventory" property="mInventory"/>
+</resultMap>
+	
+<select id="SelectInventory" resultMap="SelectInventory">
+	select * from medicine where m_inventory != 0;
+	
+</select>
+</mapper>
